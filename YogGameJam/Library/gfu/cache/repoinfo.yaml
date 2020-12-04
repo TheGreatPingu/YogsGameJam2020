@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2020-12-04T22:05:29.413+01:00
-  initializedAtString: 2020-12-04T21:47:44.507+01:00
+  lastUpdatedAtString: 2020-12-04T23:47:38.416+01:00
+  initializedAtString: 2020-12-04T23:47:38.416+01:00
   currentGitRemote:
     name: origin
-    url: git@github.com:TheGreatPingu/YogsGameJam2020.git
+    url: https://github.com/TheGreatPingu/YogsGameJam2020.git
     login: 
     user: 
     host: 
@@ -30,9 +30,9 @@ MonoBehaviour:
     name: main
     remote:
       name: origin
-      url: git@github.com:TheGreatPingu/YogsGameJam2020.git
+      url: https://github.com/TheGreatPingu/YogsGameJam2020.git
     trackingBranch: main
   currentConfigRemote:
     name: origin
-    url: git@github.com:TheGreatPingu/YogsGameJam2020.git
+    url: https://github.com/TheGreatPingu/YogsGameJam2020.git
   currentHead: 
