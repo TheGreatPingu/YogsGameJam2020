@@ -2,6 +2,12 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
+Temp/
+Library/
+Library/*
+YogGameJam/Library/*
+YogGameJam/Library/
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
