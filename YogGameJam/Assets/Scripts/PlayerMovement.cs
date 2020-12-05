@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public Rigidbody2D rigidbody;
+    public Rigidbody2D rb;
     public Camera cam;
 
     Vector2 currentPos;
@@ -27,12 +27,12 @@ public class PlayerMovement : MonoBehaviour
     {
 
         //player sprite rotation
-        Vector2 lookDir = mousePos - rigidbody.position;
+        Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        rigidbody.rotation = angle;
+        rb.rotation = angle;
 
         //player movement
-        rigidbody.MovePosition(rigidbody.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
         //cam movement
         cam.transform.position = new Vector3(currentPos.x + lookDir.x/5, currentPos.y + lookDir.y/5, -10f);
