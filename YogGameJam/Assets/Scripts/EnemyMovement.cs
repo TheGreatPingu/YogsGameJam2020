@@ -9,11 +9,8 @@ public class EnemyMovement : MonoBehaviour
     public float range;
     public float movementSpeed;
 
-    // Update is called once per frame
-
     void FixedUpdate()
     {
-        Debug.Log(transform.position);
         if (Vector2.Distance(rb.position, new Vector2(player.transform.position.x, player.transform.position.y)) < range)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, movementSpeed * Time.deltaTime);

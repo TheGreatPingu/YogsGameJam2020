@@ -25846,9 +25846,10 @@ GameObject:
   - component: {fileID: 1215690123}
   - component: {fileID: 1215690124}
   - component: {fileID: 1215690125}
+  - component: {fileID: 1215690126}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25968,8 +25969,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawn: {fileID: 1525456801}
-  projectilePrefab: {fileID: 4034636431523217488, guid: 67228b550957019469eeee3353bb4d25, type: 3}
+  prefab: {fileID: 4034636431523217488, guid: 67228b550957019469eeee3353bb4d25, type: 3}
+  isEnabled: 0
   force: 20
+  isCard: 0
 --- !u!58 &1215690124
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25999,9 +26002,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meleeSpawn: {fileID: 1525456801}
-  meleePrefab: {fileID: 4227776066380993346, guid: db7dc623ba745ed4dae228d1f6c72385, type: 3}
+  prefab: {fileID: 4227776066380993346, guid: db7dc623ba745ed4dae228d1f6c72385, type: 3}
   player: {fileID: 1215690118}
   swingSpeed: 200
+  isEnabled: 1
+--- !u!114 &1215690126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215690118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23591d4e29c1a134697dea9c764b7d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 4227776066380993346, guid: db7dc623ba745ed4dae228d1f6c72385, type: 3}
+  - {fileID: 4034636431523217488, guid: 67228b550957019469eeee3353bb4d25, type: 3}
+  - {fileID: 5866019024197073296, guid: b40be8e870f6c0648b0eb16924e455c2, type: 3}
+  - {fileID: 7350857477058378156, guid: 1da1a47b806c42546b40a66ac8573609, type: 3}
+  unlocks: 0101010101
 --- !u!1001 &1401563610
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,15 +6,17 @@ public class melee : MonoBehaviour
 {
 
     public Transform meleeSpawn;
-    public GameObject meleePrefab;
+    public GameObject prefab;
     public GameObject player;
     public int swingSpeed = 400;
     private GameObject meleeObj = null;
+    public bool isEnabled = true;
+
 
     void Update()
-    {
+    {       
         
-        if (Input.GetButtonDown("Fire1") && meleeObj == null)
+        if (Input.GetButtonDown("Fire1") && meleeObj == null && isEnabled)
         {
             Use();
         }
@@ -25,12 +27,11 @@ public class melee : MonoBehaviour
             player.transform.Rotate(new Vector3(0, 0, player.transform.rotation.eulerAngles.z));
         }
         
-        
     }
 
     void Use()
     {
-        meleeObj = Instantiate(meleePrefab, meleeSpawn.position, meleeSpawn.rotation);
+        meleeObj = Instantiate(prefab, meleeSpawn.position, meleeSpawn.rotation);
         meleeObj.transform.Rotate(new Vector3(0, 0, -40));
         Destroy(meleeObj, 60f/swingSpeed);
     }
